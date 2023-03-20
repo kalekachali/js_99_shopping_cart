@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping Cart App</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body style="background-color: rgba(0,0,0, 0.1);">
+
+        <div class="left">
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                
+                <div class="container-fluid pt-1">
+                    
+                    <a href="#none" class="btn btn-sm btn-outline-secondary position-relative" id="btn-shopping-cart">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="container">
+                
+                <div class="row">
+                
+                    <div class="col pb-5">
+                      
+                        <h4 class="mt-5 pt-3">Products</h4>
+
+                        <form action="" method="get" class="table-responsive table-responsive-products">
+
+                            <table class="table table-products table-sm table-hover align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th class="price">Price/Unit</th>
+                                        <th class="quantity">Quantity</th>
+                                        <th style="width: 1%;"></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="products_container">
+                                    
+                                </tbody>
+                            </table>
+                        </form>
+                        <!-- /table-responsive -->
+                    </div>
+                    <!-- /col -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /left -->
+
+        <div class="right">
+
+            <main class="container-fluid">
+                
+                <div class="row">
+                    
+                    <div class="col-md-12 text-center">
+                        
+                        <h4 class="my-5 text-primary">Shopping Cart App</h4>
+
+                        <div class="card mb-5">
+                            
+                            <div class="card-body">
+
+                                <div class="alert" role="alert">
+                                    Alert!
+                                </div>
+
+                                <form action="" method="get" class="table-responsive">
+                                    
+                                    <table class="table table-sm table-hover table-cart align-middle text-start" id="shopping-cart-table">
+                                        
+                                        <thead>
+                                            <tr>
+                                                <th class="close">
+                                                    <i class="fa fa-trash"></i>
+                                                </th>
+                                                <th class="particulars">Particulars</th>
+                                                <th class="price">Price&nbsp;/&nbsp;Unit</th>
+                                                <th class="quantity">Quantity</th>
+                                                <th class="total">Total&nbsp;(KSh)</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody id="cart_container">
+                                                                                        
+                                                                  
+                                            
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <!-- /table-responsive -->
+                            </div>
+                            <!-- card-body -->
+                        </div>
+                        <!-- /card -->
+                    </div>
+                    <!-- /col -->
+                </div>
+                <!-- /row -->
+            </main>
+            <!-- /container -->
+            
+        </div>
+        <!-- /right -->
+
+        <!-- delete modol -->
+        <form action="" method="get" class="modol-container" id="delete-modal-content-container">
+
+            <div class="card modol" data-id="" data-name="">
+                
+                <h5 class="card-header">
+                    <span><i class="fa fa-trash-o"></i> Delete</span>
+                    <button type="button" class="btn close-modal" onClick="closeModal();"> 
+                        <i class="fas fa-close close-modal"></i>
+                    </button>
+                </h5>
+                
+                <div class="card-body">
+                    <p class="mb-1">
+                        Are you sure you want to delete <strong>xxx</strong>?
+                    </p>
+                    <small class="text-secondary mb-0">This action is NOT reversible</small>
+                </div>
+                <!-- /card-body -->
+                
+                <div class="card-footer text-end">
+                    
+                    <button type="button" class="btn btn-outline-secondary close-modal" onClick="closeModal();">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="btn btn-danger" id="delete-single">
+                        <i class="fa fa-trash-o"></i> Delete
+                    </button>
+
+                </div>
+                <!-- /card-footer -->
+            </div>
+            <!-- /modol -->
+            
+        </form>
+
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+</html>
